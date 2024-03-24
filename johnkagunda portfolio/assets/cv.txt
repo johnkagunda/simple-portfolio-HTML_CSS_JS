@@ -1,0 +1,27 @@
+JOHN KAGUNDA
+CREATIVE DESIGNER AND DEVELOPER
+
+Summary:
+I am a creative designer and developer with one year of internship experience at Sistech Ltd, specializing in UX/UI development. Passionate about combining creativity with technical skills to produce visually appealing and functional designs.
+
+EDUCATION:
+
+Diploma in ICT
+Thika Technical Institute
+WORK EXPERIENCE:
+Intern - Sistech Ltd
+
+Engaged in UX/UI development projects, applying creative design solutions.
+Collaborated with teams to transform client ideas into innovative design concepts.
+Gained experience in backend development with Django.
+CONTACT:
+
+Email: johnkagunda@email.com
+Phone: +123-456-7890
+SKILLS:
+
+UX/UI Development
+Creative Design
+Backend Development (Django)
+Problem-solving
+Team Collaboration

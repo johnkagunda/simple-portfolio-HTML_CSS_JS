@@ -1,0 +1,588 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9; /* Light background */
+  color: #333333; /* Dark gray text */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: #555555; /* Gray text */
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #707070; /* Light gray text on hover */
+  text-decoration: underline;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold; /* Bold letters */
+  animation: nameAnimation 1s infinite alternate; /* Artistic name movement */
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: #333333;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333333;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: auto;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+  position: relative;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+/* Your existing CSS styles */
+
+/* New styles for the profile section */
+#profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f0f0f0; /* Add your preferred background color */
+}
+
+.section__pic-container {
+  position: relative;
+  overflow: hidden;
+  width: 200px; /* Adjust the width of the magnified profile picture */
+  height: 200px; /* Adjust the height of the magnified profile picture */
+  border-radius: 170%;
+  margin-bottom: 20px;
+  border:  solid greenyellow;
+}
+
+.section__pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2); /* Adjust the magnification level */
+  transition: transform 0.3s ease;
+}
+
+.section__pic-container:hover img {
+  transform: scale(1.4); /* Adjust the magnification level on hover */
+}
+
+.section__text {
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+/* Your existing CSS styles for buttons, social icons, etc. */
+
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+/* Modify the existing .btn class styles and add new styles for the button animation */
+
+.btn {
+  font-weight: 600;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.1); /* Increase the size on hover for a bubble-like effect */
+}
+
+.btn-color-1,
+.btn-color-2 {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+  border: rgb(255, 255, 255) 0.1rem solid;
+  color: rgb(53, 53, 53);
+}
+
+.btn-color-2:hover {
+  border: rgb(0, 0, 0) 0.1rem solid;
+}
+
+/* Add animation to buttons */
+
+.btn-container .btn {
+  animation: buttonAnimation 0.8s ease-out;
+}
+
+@keyframes buttonAnimation {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ABOUT SECTION */
+/* Add new styles for the "about-code" class */
+
+#about.about-code {
+  position: relative;
+  background: linear-gradient(90deg, #1f1f1f 50%, #000000 50%);
+  color: white;
+}
+
+.about-code::before {
+  content: '/* About Me */';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ff00; /* You can adjust the color based on your preference */
+  padding: 1rem;
+}
+
+/* Add more styles to enhance the code-like appearance */
+
+.section-container,
+.about-containers,
+.details-container,
+.text-container,
+.experience-details-container,
+.project-title,
+.project-btn,
+.contact-info-upper-container {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.about-containers {
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  border: 5px solid #3498db; /* Border color similar to social media icons */
+  border-radius: 20px;
+  background-color: #ffffff;
+  width: 90%;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-containers:hover {
+  background-color: #aee0ed; /* Light blue background on hover */
+}
+
+.about-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 5px solid #2ecc71; /* Border color similar to social media icons */
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-pic {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: #ffffff; /* White background */
+  border-radius: 20px;
+  border: #353535 0.1rem solid;
+  border-color: #a3a3a3;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: #333333; /* Dark gray text */
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+  filter: grayscale(80%); /* Desaturate icons for a subtle effect */
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+}
+
+.color-container {
+  border: 1px solid #3498db; /* Border color similar to social media icons */
+  background: #ffffff; /* White background */
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-img {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.project-title {
+  margin: 1rem;
+  color: #333333; /* Dark gray text */
+  font-weight: bold; /* Bold letters */
+}
+
+.project-btn {
+  color: #ffffff; /* White text */
+  background-color: #3498db; /* Button color similar to social media icons */
+  border-color: #3498db;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+}
+
+/* CONTACT SECTION */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  border: #353535 0.1rem solid;
+  border-color: #a3a3a3;
+  background: #ffffff; /* White background */
+  margin: 2rem auto;
+  padding: 0.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* Custom Animation for Name Movement */
+@keyframes nameAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+/* Add the following code at the end of your existing CSS */
+
+/* SCROLL ANIMATIONS */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animations to specific elements */
+
+#profile,
+#about,
+#experience,
+#projects,
+#contact,
+footer {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+#about .about-containers,
+#experience .color-container,
+#projects .color-container,
+.contact-info-upper-container,
+.project-img,
+.about-pic,
+.section__pic-container img {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.section__text,
+#socials-container,
+.btn-container,
+.details-container,
+.project-title,
+.project-btn,
+.contact-info-container {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slideLeft 1s ease-out forwards;
+}
+
+.h1,
+.experience-sub-title,
+.article-container,
+.menu-links a,
+.logo,
+.footer p {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideRight 1s ease-out forwards;
+}
+
+/* Adjust timing, easing, or other properties as needed */
+
